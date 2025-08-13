@@ -1,0 +1,64 @@
+.logo-strip-wrap {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.logo-strip-heading {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #333;
+  padding-top: 50px;
+}
+
+.logo-strip-heading span {
+  color: #00aaff;
+}
+
+.services-section {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  padding: 20px 40px;
+  text-align: center;
+}
+
+.service-card {
+  flex: 1 1 220px;
+  max-width: 250px;
+  margin: 20px;
+}
+
+.service-icon {
+  font-size: 40px;
+  color: #555;
+  margin-bottom: 15px;
+}
+
+.service-card h3 {
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin-bottom: 8px;
+  color: #333;
+}
+
+.underline {
+  width: 30px;
+  height: 2px;
+  background-color: #999;
+  margin: 0 auto 10px auto;
+}
+
+.service-card p {
+  font-size: 0.9rem;
+  color: #777;
+  line-height: 1.4;
+}
+
+.service-icon:hover {
+  color: #00aaff;
+  transition: all 0.6s ease;
+}
+.underline:hover {
+  color: #00aaff;
+  transition: all 0.6s ease;
+}
