@@ -51,9 +51,9 @@ function OurSolutions() {
   ];
 
   return (
-    <>
+    <div id="portfolio">
       <h3 className="logo-strip-heading text-center">
-        Our <span>Services</span>
+        Our <span>Solutions</span>
       </h3>
       <div className="ourSolutions-wrapper">
         <div className="ourSolutions-column">
@@ -108,7 +108,7 @@ function OurSolutions() {
           </div>
         </div>
       </div>
-    </>
+    </div>
   );
 }
 

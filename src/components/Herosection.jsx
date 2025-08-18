@@ -53,21 +53,25 @@ function Herosection() {
   const alignClass = currentIndex % 2 === 0 ? "align-left" : "align-right";
 
   return (
-    <div
-      className={`hero-slide ${fade ? "fade-slide" : ""}`}
-      style={{
-        backgroundImage: `url(${slides[currentIndex].image})`,
-      }}
-    >
-      <div className={`overlay ${alignClass}`}>
-        <div className={`text-content ${slideIn ? "all-slide-in" : ""}`}>
-          <h1>{slides[currentIndex].text}</h1>
+    <div id="home">
+      <div
+        className={`hero-slide ${fade ? "fade-slide" : ""}`}
+        style={{
+          backgroundImage: `url(${slides[currentIndex].image})`,
+        }}
+      >
+        <div className={`overlay ${alignClass}`}>
+          <div className={`text-content ${slideIn ? "all-slide-in" : ""}`}>
+            <h1>{slides[currentIndex].text}</h1>
 
-          <p className="hero-description">{slides[currentIndex].description}</p>
+            <p className="hero-description">
+              {slides[currentIndex].description}
+            </p>
 
-          <div id="butt" className="hero-buttons">
-            <button className="hero1">Contact Us</button>
-            <button className="hero2">About Us</button>
+            <div id="butt" className="hero-buttons">
+              <button className="hero1">Contact Us</button>
+              <button className="hero2">About Us</button>
+            </div>
           </div>
         </div>
       </div>

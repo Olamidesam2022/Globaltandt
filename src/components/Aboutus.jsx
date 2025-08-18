@@ -24,7 +24,7 @@ const Aboutus = () => {
   };
 
   return (
-    <>
+    <div id="about">
       <section className="aboutus text-center py-5">
         <h2 className="aboutus__title">
           ABOUT <span>US</span>
@@ -122,7 +122,7 @@ const Aboutus = () => {
           )}
         </div>
       </section>
-    </>
+    </div>
   );
 };
 

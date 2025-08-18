@@ -8,6 +8,7 @@ import {
   FaLinkedinIn,
   FaWhatsapp,
 } from "react-icons/fa";
+import { Link } from "react-scroll"; // 👈 react-scroll import
 
 const Navbar = () => {
   return (
@@ -32,29 +33,74 @@ const Navbar = () => {
         <div className="collapse navbar-collapse" id="navbarContent">
           <ul className="navbar-nav mx-auto gap-3">
             <li className="nav-item">
-              <a className="nav-link" href="#home">
+              <Link
+                to="home"
+                className="nav-link"
+                spy={true}
+                smooth={true}
+                offset={-70}
+                duration={500}
+                role="button"
+                style={{ cursor: "pointer" }} // 👈 makes it clickable
+              >
                 Home
-              </a>
+              </Link>
             </li>
             <li className="nav-item">
-              <a className="nav-link" href="/Aboutus.jsx">
+              <Link
+                to="about"
+                className="nav-link"
+                spy={true}
+                smooth={true}
+                offset={-70}
+                duration={500}
+                role="button"
+                style={{ cursor: "pointer" }}
+              >
                 About Us
-              </a>
+              </Link>
             </li>
             <li className="nav-item">
-              <a className="nav-link" href="#differences">
+              <Link
+                to="differences"
+                className="nav-link"
+                spy={true}
+                smooth={true}
+                offset={-70}
+                duration={500}
+                role="button"
+                style={{ cursor: "pointer" }}
+              >
                 Why Choose Us?
-              </a>
+              </Link>
             </li>
             <li className="nav-item">
-              <a className="nav-link" href="#portfolio">
+              <Link
+                to="portfolio"
+                className="nav-link"
+                spy={true}
+                smooth={true}
+                offset={-70}
+                duration={500}
+                role="button"
+                style={{ cursor: "pointer" }}
+              >
                 Our Solutions
-              </a>
+              </Link>
             </li>
             <li className="nav-item">
-              <a className="nav-link" href="#contact">
+              <Link
+                to="contact"
+                className="nav-link"
+                spy={true}
+                smooth={true}
+                offset={-70}
+                duration={500}
+                role="button"
+                style={{ cursor: "pointer" }}
+              >
                 Contact
-              </a>
+              </Link>
             </li>
           </ul>
 
