@@ -3,6 +3,7 @@ import Navbar from "./components/Navbar";
 import Herosection from "./components/Herosection";
 import Nexttab from "./components/Nexttab";
 import OurSolutions from "./components/Our Solutions";
+import Aboutus from "./components/Aboutus";
 import "./App.css";
 import Homepage from "./components/Homepage";
 ``;
@@ -15,6 +16,7 @@ function App() {
         <>
           <Navbar />
           <Herosection />
+          <Aboutus />
           <Nexttab />
           <OurSolutions />
         </>
