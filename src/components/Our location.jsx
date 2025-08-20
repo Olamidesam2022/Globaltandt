@@ -7,7 +7,7 @@ function OurLocation() {
     <>
       <section className="location text-center py-5">
         <h3 className="location__title">
-          Our <span>Location</span>
+          Our <span id="span">Location</span>
         </h3>
         <div className="location__underline" />
         <p className="location__description">
