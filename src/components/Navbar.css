@@ -1,6 +1,6 @@
 nav {
   background: radial-gradient(circle, #6bbdf1, #2d88d9);
-  height: 90.5px;
+  min-height: 100px;
 }
 
 .navbar-logo {
@@ -13,12 +13,12 @@ nav {
   font-size: 16px;
   font-weight: 500;
   color: #f8f9fa !important;
-  transition: color 0.3s;
+  transition: transform 0.3s ease, color 0.3s ease;
 }
 
 .navbar-nav .nav-link:hover {
   transform: scale(1.1);
-  transition: 0.8s;
+  color: #0dcaf0 !important;
 }
 
 .navbar-social a {
@@ -43,6 +43,12 @@ nav {
 }
 
 .navbar-collapse {
-  transition: height 1.5s ease;
-  overflow: hidden;
+  background: transparent;
+  transition: height 0.6s ease;
+}
+
+@media (max-width: 991px) {
+  .navbar-collapse {
+    padding: 15px 0;
+  }
 }
