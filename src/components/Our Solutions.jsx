@@ -52,9 +52,12 @@ function OurSolutions() {
 
   return (
     <div id="portfolio">
-      <h3 className="logo-strip-heading text-center">
-        Our <span>Solutions</span>
-      </h3>
+      <section className="solution text-center py-5">
+        <h3 className="solution__title">
+          Our <span>Solutions</span>
+        </h3>
+        <div className="solution__underline" />
+      </section>
       <div className="ourSolutions-wrapper">
         <div className="ourSolutions-column">
           <h3 className="ourSolutions-heading">

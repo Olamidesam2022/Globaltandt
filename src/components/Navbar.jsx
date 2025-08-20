@@ -64,6 +64,7 @@ const Navbar = () => {
                   duration={500}
                   offset={-70}
                   onClick={handleClose}
+                  style={{ cursor: "pointer" }} // hand cursor
                 >
                   {item.name}
                 </Link>

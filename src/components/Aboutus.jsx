@@ -26,9 +26,9 @@ const Aboutus = () => {
   return (
     <div id="about">
       <section className="aboutus text-center py-5">
-        <h2 className="aboutus__title">
+        <h3 className="aboutus__title">
           ABOUT <span>US</span>
-        </h2>
+        </h3>
         <div className="aboutus__underline" />
         <p className="aboutus__description">
           Global T&T New Solutions Limited “Global T&T” is an information

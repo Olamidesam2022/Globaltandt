@@ -1,25 +1,10 @@
-.logo-strip-wrap {
-  text-align: center;
-  margin-bottom: 30px;
-}
-
-.logo-strip-heading {
-  font-size: 2rem;
-  font-weight: bold;
-  color: #333;
-  padding-top: 50px;
-}
-
-.logo-strip-heading span {
-  color: #00aaff;
-}
-
 .services-section {
   display: flex;
   justify-content: space-around;
   flex-wrap: wrap;
   padding: 20px 40px;
   text-align: center;
+  margin-top: -80px;
 }
 
 .service-card {
@@ -61,4 +46,24 @@
 .underline:hover {
   color: #00aaff;
   transition: all 0.6s ease;
+}
+
+.services__title {
+  font-size: 24px;
+  font-weight: 700;
+  margin-bottom: 5px;
+}
+
+.services__title span {
+  color: #0077cc;
+}
+
+.services__underline {
+  width: 50px;
+  height: 3px;
+  background: #0077cc;
+  margin-top: 10px;
+  margin-bottom: 15px;
+  display: inline-block;
+  justify-content: center;
 }

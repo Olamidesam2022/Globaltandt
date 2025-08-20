@@ -5,11 +5,12 @@ import { FaCode, FaPencilAlt, FaPaperPlane, FaCheck } from "react-icons/fa";
 function Services() {
   return (
     <>
-      <div className="logo-strip-wrap">
-        <h3 className="logo-strip-heading">
+      <section className="services text-center py-5">
+        <h3 className="services__title">
           Our <span>Services</span>
         </h3>
-      </div>
+        <div className="services__underline" />
+      </section>
 
       <div className="services-section">
         <div className="service-card">
