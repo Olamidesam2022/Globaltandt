@@ -3,6 +3,27 @@ import { FaHome, FaGoogle, FaPhone } from "react-icons/fa";
 import "./Our location.css";
 
 function OurLocation() {
+  const cards = [
+    {
+      icon: <FaPhone />,
+      title: "Phone",
+      detail: "+2348183467818",
+      color: "black-card",
+    },
+    {
+      icon: <FaHome />,
+      title: "Office Location",
+      detail: "28, Mobolaji Bank Anthony Way, Ikeja, Lagos",
+      color: "blue-card",
+    },
+    {
+      icon: <FaGoogle />,
+      title: "Corporate Email",
+      detail: "admin@globaltandt.com.ng",
+      color: "black-card",
+    },
+  ];
+
   return (
     <>
       <section className="location text-center py-5">
@@ -17,28 +38,23 @@ function OurLocation() {
         <br />
         <br />
       </section>
+
       <div className="cards-container">
-        <div className="card black-card">
-          <div className="icon-circle">
-            <FaPhone />
+        {cards.map((card, index) => (
+          <div key={index} className="flip-card">
+            <div className={`flip-card-inner ${card.color}`}>
+              {/* Front Side */}
+              <div className="flip-card-front">
+                <div className="icon-circle">{card.icon}</div>
+                <h4>{card.title}</h4>
+              </div>
+              {/* Back Side */}
+              <div className="flip-card-back">
+                <p>{card.detail}</p>
+              </div>
+            </div>
           </div>
-          <h4>Phone</h4>
-          <p>+2348183467818</p>
-        </div>
-        <div className="card blue-card">
-          <div className="icon-circle">
-            <FaHome />
-          </div>
-          <h4>Office Location</h4>
-          <p>28, Mobolaji Bank Anthony Way, Ikeja,Lagos</p>
-        </div>
-        <div className="card black-card">
-          <div className="icon-circle">
-            <FaGoogle />
-          </div>
-          <h4>Corporate Email</h4>
-          <p>admin@globaltandt.com.ng</p>
-        </div>
+        ))}
       </div>
     </>
   );

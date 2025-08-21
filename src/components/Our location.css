@@ -5,14 +5,50 @@
   margin: -70px 0 40px 0;
 }
 
-.card {
-  margin: 10px auto 15px auto;
-  padding: 10px;
+/* Flip card container */
+.flip-card {
+  perspective: 1000px;
   width: 350px;
-  text-align: center;
+  height: 200px;
+}
+
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.8s ease;
+  transform-style: preserve-3d;
   border-radius: 10px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
   color: white;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* 🔹 Flip on hover */
+.flip-card:hover .flip-card-inner {
+  transform: rotateY(180deg);
+}
+
+.flip-card-front,
+.flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 15px;
+  text-align: center;
+}
+
+.flip-card-front {
+  z-index: 2;
+}
+
+.flip-card-back {
+  transform: rotateY(180deg);
 }
 
 .black-card {
@@ -52,10 +88,11 @@ p {
     align-items: center;
   }
 
-  .card {
+  .flip-card {
     width: 90%;
   }
 }
+
 #span {
   color: #0077cc;
   font-weight: bold;
