@@ -7,7 +7,7 @@ function OurLocation() {
     {
       icon: <FaPhone />,
       title: "Phone",
-      detail: "+2348183467818",
+      detail: "+2349020720820",
       color: "black-card",
     },
     {
