@@ -1,6 +1,28 @@
-import React, { useRef, useState, useEffect } from "react";
-import CountUp from "react-countup";
+import React, { useState, useEffect, useRef } from "react";
 import "./WhyChooseUs.css";
+
+const Counter = ({ end, duration, startCount }) => {
+  const [count, setCount] = useState(0);
+
+  useEffect(() => {
+    if (!startCount) return; // don’t start until section is visible
+
+    let start = 0;
+    const increment = end / (duration * 60); // 60fps
+    const timer = setInterval(() => {
+      start += increment;
+      if (start >= end) {
+        start = end;
+        clearInterval(timer);
+      }
+      setCount(Math.floor(start));
+    }, 1000 / 60);
+
+    return () => clearInterval(timer);
+  }, [end, duration, startCount]);
+
+  return <span>{count.toLocaleString()}</span>;
+};
 
 const WhyChooseUs = () => {
   const [startCount, setStartCount] = useState(false);
@@ -10,7 +32,7 @@ const WhyChooseUs = () => {
     { number: 43, label: "PROJECT COMPLETE" },
     { number: 13300, label: "SUPPORT TICKET" },
     { number: 50, label: "GLOBAL CLIENTS" },
-    { number: 24, label: "LIVE SUPPORT (HOURS)" }, // replaced NaN
+    { number: 24, label: "LIVE SUPPORT (HOURS)" },
   ];
 
   useEffect(() => {
@@ -18,7 +40,7 @@ const WhyChooseUs = () => {
       (entries) => {
         if (entries[0].isIntersecting) {
           setStartCount(true);
-          observer.disconnect();
+          observer.disconnect(); // trigger only once
         }
       },
       { threshold: 0.3 }
@@ -45,16 +67,11 @@ const WhyChooseUs = () => {
             {stats.map((item, index) => (
               <div key={index} className="stat-box">
                 <h3>
-                  {startCount ? (
-                    <CountUp
-                      start={0}
-                      end={item.number}
-                      duration={2.5}
-                      separator=","
-                    />
-                  ) : (
-                    "0"
-                  )}
+                  <Counter
+                    end={item.number}
+                    duration={2.5}
+                    startCount={startCount}
+                  />
                 </h3>
                 <p>{item.label}</p>
               </div>
@@ -63,7 +80,7 @@ const WhyChooseUs = () => {
         </div>
 
         <div className="why-right">
-          <img src="/why.jpg" alt="Tech background" />
+          <img src="/why.jpg" alt="Team working on technology" loading="lazy" />
         </div>
       </section>
     </div>
