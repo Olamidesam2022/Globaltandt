@@ -7,6 +7,7 @@ import Aboutus from "./components/Aboutus";
 import WhyChooseUs from "./components/WhyChooseUs";
 import OurLocation from "./components/Our location";
 import Footer from "./components/Footer";
+import Contactus from "./components/contactus";
 import "./App.css";
 import Homepage from "./components/Homepage";
 ``;
@@ -23,6 +24,7 @@ function App() {
           <WhyChooseUs />
           <Nexttab />
           <OurSolutions />
+          <Contactus />
           <OurLocation />
           <Footer />
         </>
