@@ -1,6 +1,6 @@
 import React from "react";
 import { FaPaperPlane } from "react-icons/fa";
-import "./Contactus.css";
+import "./ourcontact.css";
 
 const Contact = () => {
   return (

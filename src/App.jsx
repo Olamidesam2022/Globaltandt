@@ -7,7 +7,7 @@ import Aboutus from "./components/Aboutus";
 import WhyChooseUs from "./components/WhyChooseUs";
 import OurLocation from "./components/Our location";
 import Footer from "./components/Footer";
-import Contactus from "./components/contactus";
+import Contactus from "./components/ourcontact";
 import "./App.css";
 import Homepage from "./components/Homepage";
 ``;
